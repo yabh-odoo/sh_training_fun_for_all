@@ -7,9 +7,9 @@ from odoo import api, fields, models
 class PosConfig(models.Model):
     _inherit = 'pos.config'
 
-    iface_discount = fields.Boolean(string='Order Discounts', help='Allow the cashier to give discounts on the whole order.')
-    discount_pc = fields.Float(string='Discount Percentage', help='The default discount percentage', default=10.0)
-    discount_product_id = fields.Many2one('product.product', string='Discount Product',
+    iface_discount_plop = fields.Boolean(string='Order Discounts', help='Allow the cashier to give discounts on the whole order.')
+    discount_pc_coucou = fields.Float(string='Discount Percentage', help='The default discount percentage', default=10.0)
+    discount_product_id_test_prout = fields.Many2one('product.product', string='Discount Product',
         domain="[('sale_ok', '=', True)]", help='The product used to model the discount.')
 
     @api.onchange('company_id','module_pos_discount')
